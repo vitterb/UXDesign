@@ -1,0 +1,15 @@
+
+
+#content{
+  text-align: center;
+}
+
+#outer-circle{
+  border: 10px solid black;
+  background-color: darkgreen;
+  border-radius:50%;
+  padding:15px;
+}
+#inside-content{
+  color: white;
+}
