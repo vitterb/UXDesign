@@ -14,6 +14,16 @@ export class ScrollwheelComponent {
   constructor(private uxService: UXserviceService){}
 
   addStop(){
+    if(this.location == 'Classroom'){
+      let input = prompt('please enter the number of the classroom');
+      if(input && input.length == 4){
+        this.location = input;
+      } else
+      {
+        console.log('invalid');
+        return;
+      }
+    }
     this.uxService.addStop(this.location);
   }
 }
