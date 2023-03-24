@@ -1,11 +1,13 @@
 
 <div id="content">
-    <h1>circle</h1>
     <span id="outer-circle">
         <span id="inside-content">
-            <select class="is-primary" name="" id="" [(ngModel)]="location">
+            <select class="circle" name="" id="" [(ngModel)]="location">
               <option *ngFor="let p of locations">{{p}}</option>
             </select>
         </span>
+    </span>
+    <span id="outer-circle">
+        <button class="circle" (click)="addStop()">add</button>
     </span>
 </div>

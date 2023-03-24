@@ -2,6 +2,7 @@
 
 #content{
   text-align: center;
+  padding-top: 5%;
 }
 
 #outer-circle{
@@ -12,4 +13,10 @@
 }
 #inside-content{
   color: white;
+}
+.circle{
+  background-color: green;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
 }

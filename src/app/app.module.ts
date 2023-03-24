@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ScrollwheelComponent } from './scrollwheel/scrollwheel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StopslistComponent } from './stopslist/stopslist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollwheelComponent
+    ScrollwheelComponent,
+    StopslistComponent
   ],
   imports: [
     BrowserModule,

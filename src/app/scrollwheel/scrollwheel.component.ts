@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UXserviceService } from '../services/uxservice.service';
 
 @Component({
   selector: 'app-scrollwheel',
@@ -7,7 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ScrollwheelComponent {
 
-  location: number = 1;
+  location: string = "";
   locations: string[] = ["Costa","Toilets","Classroom","Offices"];
+
+  constructor(private uxService: UXserviceService){}
+
+  addStop(){
+    this.uxService.addStop(this.location);
+  }
 }
 

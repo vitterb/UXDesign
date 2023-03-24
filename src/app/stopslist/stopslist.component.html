@@ -1,0 +1,4 @@
+<table class="table">
+    <tr *ngIf="Stops.length == 0">No stops added!</tr> 
+    <tr *ngFor="let s of Stops; let i = index"><td>{{s}} <button class="delete" (click)="removeStop(i)"></button></td></tr>
+</table>
