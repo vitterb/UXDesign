@@ -7,15 +7,17 @@ import * as _ from "lodash"
 export class UXserviceService {
 
   stops: string[] = []
+  start: boolean = false;
 
   constructor() { }
 
-  GetStops() { 
+  GetStops() {
     return this.stops;
   }
   addStop(stop: string){
     this.stops.push(stop);
-    console.log('adding:', stop)
   }
   removeStop = (index:number) => this.stops.splice(index,1)
+
+  startbutton = () => this.start = true;
 }

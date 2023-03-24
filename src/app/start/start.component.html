@@ -1,0 +1,5 @@
+<div class="circle">
+      <div *ngIf="destinations.length == 1"><br><br><br>Navigation to {{destinations[0]}} started.</div>
+      <div *ngIf="destinations.length >1"><br><br><br>Navigation starts at {{destinations.slice(-1)}}</div>
+      <div *ngFor="let d of destinations; let i = index">{{d}} <button class="delete" (click)="removeStop(i)"></button>></div>
+</div>

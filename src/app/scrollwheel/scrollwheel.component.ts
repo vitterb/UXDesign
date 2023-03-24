@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UXserviceService } from '../services/uxservice.service';
 
 @Component({
@@ -6,21 +6,36 @@ import { UXserviceService } from '../services/uxservice.service';
   templateUrl: './scrollwheel.component.html',
   styleUrls: ['./scrollwheel.component.css']
 })
-export class ScrollwheelComponent {
+export class ScrollwheelComponent implements OnInit {
 
   location: string = "";
-  locations: string[] = ["Costa","Toilets","Classroom","Offices"];
+  locations: string[] = ["Costa","Toilets","Classroom","Offices", "Janitors","Receptionist","Entrance"];
+  start: boolean = false;
 
   constructor(private uxService: UXserviceService){}
 
+  ngOnInit(){
+    this.start = this.uxService.startbutton();
+  }
+
   addStop(){
     if(this.location == 'Classroom'){
-      let input = prompt('please enter the number of the classroom');
+      let input = prompt('please enter the 4 digit number of the classroom');
       if(input && input.length == 4){
-        this.location = input;
+        this.location = "p" + input;
       } else
       {
-        console.log('invalid');
+        alert('invalid');
+        return;
+      }
+    }
+    if(this.location == 'Offices'){
+      let input = prompt('please enter the 4 digit number of the office');
+      if(input && input.length == 4){
+        this.location = "s" + input;
+      } else
+      {
+        alert('invalid');
         return;
       }
     }
